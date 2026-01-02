@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<!--
+    File: Dashboard.fxml
+    Controller: HomeController.java
+    Fungsi: Dashboard dengan Grafik Peminjaman per Instansi
+    Layout: 3 grafik per baris, scrollable
+-->
+
+<BorderPane fx:id="rootPane" 
+            prefHeight="700.0" 
+            prefWidth="1200.0" 
+            style="-fx-background-color: #F5E6D3;" 
+            xmlns="http://javafx.com/javafx/21" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.inventaris.controller.HomeController">
+    
+    <center>
+        <ScrollPane fx:id="scrollPane" 
+                    fitToWidth="true" 
+                    pannable="true" 
+                    style="-fx-background: #F5E6D3; -fx-background-color: #F5E6D3;">
+            
+            <content>
+                <FlowPane fx:id="chartContainer" 
+                          hgap="20" 
+                          vgap="20" 
+                          alignment="TOP_CENTER"
+                          style="-fx-background-color: #F5E6D3;">
+                    <padding>
+                        <Insets top="30" right="30" bottom="30" left="30"/>
+                    </padding>
+                </FlowPane>
+            </content>
+            
+        </ScrollPane>
+    </center>
+    
+</BorderPane>
